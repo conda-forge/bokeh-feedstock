@@ -1,6 +1,6 @@
 {% set name = "bokeh" %}
-{% set version = "0.12.3" %}
-{% set checksum = "e138941b62f59bc48bc5b8d249e90c03fed31c1d5abe47ab2ce9e4c83202f73c" %}
+{% set version = "0.12.4" %}
+{% set checksum = "4fa2360f4492785d47c898be72374f0123bf8e8a939824ed1d1610f1ce30b2a0" %}
 
 package:
   name: {{ name }}
@@ -48,6 +48,7 @@ test:
     - bokeh.core.compat
     - bokeh.core.compat.mplexporter
     - bokeh.core.compat.mplexporter.renderers
+    - bokeh.core.property
     - bokeh.core.validation
     - bokeh.models
     - bokeh.models.widgets
@@ -63,7 +64,6 @@ test:
 
   commands:
     - bokeh --help
-    - bokeh-server --help
 
 about:
   home: http://github.com/bokeh/bokeh
