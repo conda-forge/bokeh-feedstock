@@ -1,6 +1,6 @@
 {% set name = "bokeh" %}
-{% set version = "0.11.1" %}
-{% set checksum = "34a73d8f68e7d6faaecc9f785cac8e9f76b88a7e7aacf66307076b03b4d3c472" %}
+{% set version = "0.12.0" %}
+{% set checksum = "b8ec2f18929dc637c3e3b8971e5ebfdc472c19c7e323327557cdb28ddc5e61cf" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install
   entry_points:
     - bokeh = bokeh.__main__:main
