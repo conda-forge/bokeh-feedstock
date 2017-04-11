@@ -1,6 +1,6 @@
 {% set name = "bokeh" %}
-{% set version = "0.12.4" %}
-{% set checksum = "4fa2360f4492785d47c898be72374f0123bf8e8a939824ed1d1610f1ce30b2a0" %}
+{% set version = "0.12.5" %}
+{% set checksum = "beb65135e797b936fc4105e4e6c3694c761d11569458fdca45c6b8861b4d9b22" %}
 
 package:
   name: {{ name }}
@@ -10,16 +10,24 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ checksum }}
+  patches:
+    ##################################################
+    # Exclude some inadvertently installed packages. #
+    #                                                #
+    # ref: https://github.com/bokeh/bokeh/pull/6114  #
+    ##################################################
+    - PR_6114.diff
 
 build:
   number: 0
-  script: python setup.py install
+  script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - bokeh = bokeh.__main__:main
 
 requirements:
   build:
     - python
+    - setuptools
 
   run:
     - python

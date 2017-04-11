@@ -1,0 +1,25 @@
+diff --git MANIFEST.in MANIFEST.in
+index af79775..4518251 100644
+--- MANIFEST.in
++++ MANIFEST.in
+@@ -7,6 +7,7 @@ include versioneer.py
+ include _setup_support.py
+ include bokeh/themes/*.yaml
+ recursive-include examples *.py *.ipynb *.md
++recursive-include tests *.py *.ipynb *.jinja *.js *.md *.png
+ prune examples/charts/.ipynb_checkpoints
+ prune examples/compat/mpl/.ipynb_checkpoints
+ prune examples/glyphs/.ipynb_checkpoints
+diff --git setup.py setup.py
+index 3f3cf90..cc79497 100644
+--- setup.py
++++ setup.py
+@@ -131,7 +131,7 @@
+ 
+     # details needed by setup
+     install_requires=REQUIRES,
+-    packages=find_packages(),
++    packages=find_packages(exclude=["scripts*", "tests*"]),
+     package_data=get_package_data(),
+     entry_points={'console_scripts': ['bokeh = bokeh.__main__:main',], },
+     zip_safe=False,
