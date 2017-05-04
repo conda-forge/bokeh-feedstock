@@ -19,7 +19,7 @@ source:
     - PR_6114.diff
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - bokeh = bokeh.__main__:main
@@ -37,7 +37,8 @@ requirements:
     - python-dateutil >=2.1
     - jinja2 >=2.7
     - numpy >=1.7.1
-    - tornado >=4.3
+    # review <4.5 when the next release is available.
+    - tornado >=4.3,<4.5
     - futures >=3.0.3         # [py2k]
     - pandas
     - matplotlib
