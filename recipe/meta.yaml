@@ -17,6 +17,12 @@ source:
     # ref: https://github.com/bokeh/bokeh/pull/6114  #
     ##################################################
     - PR_6114.diff
+    ##################################################
+    # Include a patch for newer tornado versions.    #
+    #                                                #
+    # ref: https://github.com/bokeh/bokeh/pull/6155  #
+    ##################################################
+    - PR_6155.diff
 
 build:
   number: 1
