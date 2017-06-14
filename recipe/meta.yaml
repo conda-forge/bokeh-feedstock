@@ -34,7 +34,7 @@ requirements:
     - futures >=3.0.3         # [py2k]
     - pandas
     - matplotlib
-    - bkharts >=0.2
+    - bkcharts >=0.2
 
 test:
   imports:
