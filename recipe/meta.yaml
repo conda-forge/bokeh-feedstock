@@ -1,6 +1,6 @@
 {% set name = "bokeh" %}
-{% set version = "0.12.5" %}
-{% set checksum = "beb65135e797b936fc4105e4e6c3694c761d11569458fdca45c6b8861b4d9b22" %}
+{% set version = "0.12.6" %}
+{% set checksum = "a2ddcc694c387440a2b361e741d2fa9a18ad0508a879a71f524a2f0ff7803181" %}
 
 package:
   name: {{ name }}
@@ -10,22 +10,9 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ checksum }}
-  patches:
-    ##################################################
-    # Exclude some inadvertently installed packages. #
-    #                                                #
-    # ref: https://github.com/bokeh/bokeh/pull/6114  #
-    ##################################################
-    - PR_6114.diff
-    ##################################################
-    # Include a patch for newer tornado versions.    #
-    #                                                #
-    # ref: https://github.com/bokeh/bokeh/pull/6155  #
-    ##################################################
-    - PR_6155.diff
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - bokeh = bokeh.__main__:main
@@ -47,6 +34,7 @@ requirements:
     - futures >=3.0.3         # [py2k]
     - pandas
     - matplotlib
+    - bkcharts >=0.2
 
 test:
   imports:
@@ -54,7 +42,9 @@ test:
     - bokeh.application
     - bokeh.application.handlers
     - bokeh.charts
-    - bokeh.charts.builders
+    # remove this test according to discussion in
+    # https://github.com/conda-forge/bokeh-feedstock/pull/11
+    # - bokeh.charts.builders
     - bokeh.client
     - bokeh.command
     - bokeh.command.subcommands
