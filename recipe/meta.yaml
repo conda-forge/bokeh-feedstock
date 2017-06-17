@@ -42,7 +42,9 @@ test:
     - bokeh.application
     - bokeh.application.handlers
     - bokeh.charts
-    - bokeh.charts.builders
+    # remove this test according to discussion in
+    # https://github.com/conda-forge/bokeh-feedstock/pull/11
+    # - bokeh.charts.builders
     - bokeh.client
     - bokeh.command
     - bokeh.command.subcommands
