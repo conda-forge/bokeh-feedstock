@@ -1,6 +1,6 @@
 {% set name = "bokeh" %}
-{% set version = "0.12.11" %}
-{% set checksum = "d29b544dd4576900774773a951bf61e2e0a0456d0b065baf48cbf30a8e0c0e95" %}
+{% set version = "0.12.13rc1" %}
+{% set checksum = "34c7c08957e5443413de9a5efd826f171cb29636edf6fca3ddd8960f26601e18" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://anaconda.org/bokeh/bokeh/{{ version }}/download/bokeh-{{ version }}.tar.gz
   sha256: {{ checksum }}
 
 build:
