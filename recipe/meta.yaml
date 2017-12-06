@@ -1,6 +1,6 @@
 {% set name = "bokeh" %}
-{% set version = "0.12.11" %}
-{% set checksum = "d29b544dd4576900774773a951bf61e2e0a0456d0b065baf48cbf30a8e0c0e95" %}
+{% set version = "0.12.12" %}
+{% set checksum = "bb25d16230ae2d029d36c8311aab40a0c1e251d31e42ab587f6929e10e273be6" %}
 
 package:
   name: {{ name }}
