@@ -27,7 +27,7 @@ requirements:
     - python-dateutil >=2.1
     - jinja2 >=2.7
     - numpy >=1.7.1
-    - packaging
+    - packaging >=16.8
     - tornado >=4.3
     - futures >=3.0.3         # [py2k]
 
