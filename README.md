@@ -21,14 +21,16 @@ applications.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bokeh-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/bokeh-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/bokeh-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bokeh-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bokeh-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bokeh-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/bokeh-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/bokeh-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/bokeh-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/bokeh-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/bokeh-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/bokeh-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bokeh/badges/version.svg)](https://anaconda.org/conda-forge/bokeh)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bokeh/badges/downloads.svg)](https://anaconda.org/conda-forge/bokeh)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-bokeh-green.svg)](https://anaconda.org/conda-forge/bokeh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bokeh.svg)](https://anaconda.org/conda-forge/bokeh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bokeh.svg)](https://anaconda.org/conda-forge/bokeh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bokeh.svg)](https://anaconda.org/conda-forge/bokeh) |
 
 Installing bokeh
 ================
