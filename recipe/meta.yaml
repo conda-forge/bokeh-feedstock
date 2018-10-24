@@ -24,10 +24,11 @@ requirements:
     - pyyaml >=3.10
     - python-dateutil >=2.1
     - jinja2 >=2.7
-    - numpy
+    - numpy >=1.7.1
+    - pillow >=4.0
     - packaging >=16.8
     - tornado >=4.3
-    - futures >=3.0.3  # [py2k]
+    - futures >=3.0.3  # [py27]
 
 test:
   imports:
