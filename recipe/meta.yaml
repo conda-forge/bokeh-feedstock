@@ -1,4 +1,4 @@
-{% set version = "0.13.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: bokeh
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: d0cf59774d7c74b7173b82ce36bde35b8fe9da0f960364ba3c4df0d1fbd874d6
+  sha256: 16aa635ce85ce89197eb78c19098f9729ee8b2b869c940dfda2ceb51b81c2fc0
 
 build:
   number: 1000
@@ -24,10 +24,11 @@ requirements:
     - pyyaml >=3.10
     - python-dateutil >=2.1
     - jinja2 >=2.7
-    - numpy
+    - numpy >=1.7.1
+    - pillow >=4.0
     - packaging >=16.8
     - tornado >=4.3
-    - futures >=3.0.3  # [py2k]
+    - futures >=3.0.3  # [py27]
 
 test:
   imports:
