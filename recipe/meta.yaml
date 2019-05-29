@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: bokeh
@@ -6,11 +6,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: 70c944ccb99faea9c1bc2b77caba4dbcd884e083fc32511efbd6f895d7cb6832
+  sha256: d45d797b5b3f5bb688eb636fb0430b0d57af232abd8ddc07ddba922c1ef0c3ae
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script:
+    - python -m pip install --no-deps --ignore-installed .
+    - find {{ PREFIX }} -name '*.js.map' -delete  # [not win]
   entry_points:
     - bokeh = bokeh.__main__:main
 
