@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: bokeh
@@ -6,12 +6,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: c60d38a41a777b8147ee4134e6142cea8026b5eebf48149e370c44689869dce7
+  sha256: 552aae6844b2b82dc6da77b17f3f0c22f600c181b4e334f4883624665245ac59
 
 build:
   number: 0
+  skip: True  # [py<36]
   script:
-    - python -m pip install --no-deps --ignore-installed .
+    - {{ PYTHON }} -m pip install . -vv
+    # this reduces the package size drastically without any real loss
     - find {{ PREFIX }} -name '*.js.map' -delete  # [not win]
   entry_points:
     - bokeh = bokeh.__main__:main
@@ -22,15 +24,14 @@ requirements:
     - pip
   run:
     - python
-    - six >=1.5.2
     - pyyaml >=3.10
     - python-dateutil >=2.1
     - jinja2 >=2.7
-    - numpy >=1.7.1
+    - numpy >=1.11.3
     - pillow >=4.0
     - packaging >=16.8
-    - tornado >=4.3
-    - futures >=3.0.3  # [py27]
+    - tornado >=5
+    - typing_extensions >=3.7.4
 
 test:
   imports:
@@ -54,13 +55,15 @@ test:
     - bokeh.sphinxext
     - bokeh.themes
     - bokeh.util
-
   commands:
+    - pip check
     - bokeh --help
+  requires:
+    - pip
 
 about:
   home: http://bokeh.pydata.org/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   license_family: BSD
   summary: Statistical and novel interactive HTML plots for Python
