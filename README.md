@@ -33,7 +33,7 @@ Current build status
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/bokeh-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/bokeh-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr>
@@ -284,5 +284,7 @@ Feedstock Maintainers
 
 * [@almarklein](https://github.com/almarklein/)
 * [@jakirkham](https://github.com/jakirkham/)
+* [@mattpap](https://github.com/mattpap/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@philippjfr](https://github.com/philippjfr/)
 
