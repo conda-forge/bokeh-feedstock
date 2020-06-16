@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: bokeh
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: d9248bdb0156797abf6d04b5eac581dcb121f5d1db7acbc13282b0609314893a
+  sha256: 632f2e372c103a8f3671a3211d7a45c204a8a896773d5f91c9f818c3b74e2590
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - numpy >=1.11.3
     - pillow >=4.0
     - packaging >=16.8
-    - tornado >=5
+    - tornado >=5.1
     - typing_extensions >=3.7.4
 
 test:
