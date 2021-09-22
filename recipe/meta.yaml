@@ -1,4 +1,4 @@
-{% set version = "2.3.3" %}
+{% set version = "2.4.0" %}
 
 package:
   name: bokeh
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: a5fdcc181835561447fcc5a371300973fce4114692d5853addec284d1cdeb677
+  sha256: 6fa00ed8baab5cca33f4175792c309fa2536eaae7e90abee884501ba8c90fddb
 
 build:
   number: 0
-  skip: true  # [py<36]
+  skip: true  # [py<37]
   script:
-    - {{ PYTHON }} -m pip install . -vv
+    - {{ PYTHON }} setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - bokeh = bokeh.__main__:main
 
@@ -25,14 +25,13 @@ requirements:
     - pip
   run:
     - python
-    - pyyaml >=3.10
-    - python-dateutil >=2.1
-    - jinja2 >=2.7
+    - jinja2 >=2.9
     - numpy >=1.11.3
-    - pillow >=7.1.0
     - packaging >=16.8
+    - pillow >=7.1.0
+    - pyyaml >=3.10
     - tornado >=5.1
-    - typing_extensions >=3.7.4
+    - typing_extensions >=3.10.0
 
 test:
   imports:
