@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bokeh-feedstock
 
 Summary: Statistical and novel interactive HTML plots for Python
 
-Development: http://github.com/bokeh/bokeh
+Development: https://github.com/bokeh/bokeh
 
-Documentation: http://docs.bokeh.org
+Documentation: https://docs.bokeh.org
 
 Bokeh is a Python interactive visualization library that targets
 modern web browsers for presentation. Its goal is to provide elegant,
