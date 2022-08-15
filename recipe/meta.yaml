@@ -72,8 +72,8 @@ about:
     large or streaming datasets. Bokeh can help anyone who would like to
     quickly and easily create interactive plots, dashboards, and data
     applications.
-  doc_url: http://docs.bokeh.org
-  dev_url: http://github.com/bokeh/bokeh
+  doc_url: https://docs.bokeh.org
+  dev_url: https://github.com/bokeh/bokeh
 
 extra:
   recipe-maintainers:
