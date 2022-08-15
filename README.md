@@ -1,7 +1,7 @@
 About bokeh
 ===========
 
-Home: http://bokeh.pydata.org/
+Home: https://bokeh.org
 
 Package license: BSD-3-Clause
 
@@ -11,7 +11,7 @@ Summary: Statistical and novel interactive HTML plots for Python
 
 Development: http://github.com/bokeh/bokeh
 
-Documentation: http://bokeh.pydata.org/en/latest/docs/user_guide.html
+Documentation: http://docs.bokeh.org
 
 Bokeh is a Python interactive visualization library that targets
 modern web browsers for presentation. Its goal is to provide elegant,
