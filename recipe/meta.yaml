@@ -9,7 +9,7 @@ source:
   sha256: ef33801161af379665ab7a34684f2209861e3aefd5c803a21fbbb99d94874b03
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
@@ -59,7 +59,7 @@ test:
     - pip
 
 about:
-  home: http://bokeh.pydata.org/
+  home: https://bokeh.org
   license: BSD-3-Clause
   license_file: LICENSE.txt
   license_family: BSD
@@ -72,7 +72,7 @@ about:
     large or streaming datasets. Bokeh can help anyone who would like to
     quickly and easily create interactive plots, dashboards, and data
     applications.
-  doc_url: http://bokeh.pydata.org/en/latest/docs/user_guide.html
+  doc_url: http://docs.bokeh.org
   dev_url: http://github.com/bokeh/bokeh
 
 extra:
