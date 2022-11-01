@@ -18,17 +18,21 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >=3.8
     - jinja2 >=2.9
+    - contourpy >=1
     - numpy >=1.11.3
     - packaging >=16.8
+    - pandas >=1.2
     - pillow >=7.1.0
     - pyyaml >=3.10
     - tornado >=5.1
     - typing_extensions >=3.10.0
+    - xyzservices >=2021.09.1
 
 test:
   imports:
