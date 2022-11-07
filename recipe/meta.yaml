@@ -1,4 +1,4 @@
-{% set version = "2.4.3" %}
+{% set version = "3.0.1" %}
 
 package:
   name: bokeh
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: ef33801161af379665ab7a34684f2209861e3aefd5c803a21fbbb99d94874b03
+  sha256: aa044829f66f08e9aeb74e33d538bc719270406124ea128bd7616e09e1561815
 
 build:
-  number: 3
+  number: 0
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
@@ -18,17 +18,22 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
+    - setuptools-git-versioning
+    - setuptools >=64
+    - colorama
   run:
-    - python >=3.7
+    - python >=3.8
     - jinja2 >=2.9
+    - contourpy >=1
     - numpy >=1.11.3
     - packaging >=16.8
+    - pandas >=1.2
     - pillow >=7.1.0
     - pyyaml >=3.10
     - tornado >=5.1
-    - typing_extensions >=3.10.0
+    - xyzservices >=2021.09.1
 
 test:
   imports:
