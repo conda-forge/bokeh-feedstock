@@ -27,7 +27,7 @@ requirements:
     - python >=3.8
     - jinja2 >=2.9
     - contourpy >=1
-    - numpy >=1.16
+    - numpy >=1.11.3
     - packaging >=16.8
     - pandas >=1.2
     - pillow >=7.1.0
