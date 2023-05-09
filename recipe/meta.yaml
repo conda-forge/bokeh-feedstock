@@ -25,7 +25,6 @@ requirements:
     - setuptools-git-versioning
     - setuptools >=64
     - colorama
-    - git
   run:
     - python >=3.8
     - jinja2 >=2.9
