@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
   sha256: ba0fc6bae4352d307541293256dee930a42d0acf92e760c72dc0e7397c3a28e9
+  patches:
+    - do_not_check_tags.patch
 
 build:
   number: 0
@@ -23,6 +25,7 @@ requirements:
     - setuptools-git-versioning
     - setuptools >=64
     - colorama
+    - git
   run:
     - python >=3.8
     - jinja2 >=2.9
