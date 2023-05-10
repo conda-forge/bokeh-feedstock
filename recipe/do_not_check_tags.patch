@@ -1,0 +1,11 @@
+--- bokeh-3.1.1.orig/setup.py	2023-05-09 15:24:08.287369495 -0300
++++ bokeh-3.1.1.patch/setup.py	2023-05-09 15:38:57.393843475 -0300
+@@ -156,7 +156,7 @@
+ 
+ class Build(build):  # type: ignore
+     def run(self) -> None:
+-        check_tags()
++        # check_tags()
+         build_or_install_bokehjs(self.distribution.packages)
+         super().run()
+ 

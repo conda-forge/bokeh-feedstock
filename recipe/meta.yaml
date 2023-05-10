@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "3.1.1" %}
 
 package:
   name: bokeh
@@ -6,7 +6,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: 9047dfe50a671b5e19ca588fd90a8e6bff197114a5dbd6a59cc2678942c27887
+  sha256: ba0fc6bae4352d307541293256dee930a42d0acf92e760c72dc0e7397c3a28e9
+  patches:
+    - do_not_check_tags.patch
 
 build:
   number: 0
