@@ -1,4 +1,4 @@
-{% set version = "3.1.1" %}
+{% set version = "3.2.0" %}
 
 package:
   name: bokeh
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: ba0fc6bae4352d307541293256dee930a42d0acf92e760c72dc0e7397c3a28e9
+  sha256: cdb3a8c3109d8d91a2814f4cddea045c14d049021f7fb6ce2a6b2c15e224bb17
   patches:
     - do_not_check_tags.patch
 
@@ -20,13 +20,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - setuptools-git-versioning
     - setuptools >=64
     - colorama
   run:
-    - python >=3.8
+    - python >=3.9
     - jinja2 >=2.9
     - contourpy >=1
     - numpy >=1.16
