@@ -20,13 +20,13 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - pip
     - setuptools-git-versioning
     - setuptools >=64
     - colorama
   run:
-    - python >=3.9
+    - python >=3.10
     - jinja2 >=2.9
     - contourpy >=1.2
     - numpy >=1.16
