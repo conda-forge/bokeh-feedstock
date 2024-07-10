@@ -51,7 +51,6 @@ test:
     - bokeh.models
     - bokeh.models.widgets
     - bokeh.plotting
-    - bokeh.sampledata
     - bokeh.server
     - bokeh.protocol
     - bokeh.protocol.messages
