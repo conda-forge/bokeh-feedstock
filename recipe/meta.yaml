@@ -1,4 +1,4 @@
-{% set version = "3.4.2" %}
+{% set version = "3.5.0" %}
 
 package:
   name: bokeh
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: a16d5cc0abb93d2d270d70fc35851f3e1b9208814a985a4678e0ba5ef2d9cd42
+  sha256: 65e89addbe900c37af25a2052ae174b6d3ba1ef08c91fd5ab6dfd712e184c399
   patches:
     - do_not_check_tags.patch
 
@@ -20,13 +20,13 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - pip
     - setuptools-git-versioning
     - setuptools >=64
     - colorama
   run:
-    - python >=3.9
+    - python >=3.10
     - jinja2 >=2.9
     - contourpy >=1.2
     - numpy >=1.16
@@ -51,7 +51,6 @@ test:
     - bokeh.models
     - bokeh.models.widgets
     - bokeh.plotting
-    - bokeh.sampledata
     - bokeh.server
     - bokeh.protocol
     - bokeh.protocol.messages
