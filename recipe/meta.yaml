@@ -1,5 +1,5 @@
 {% set python_min = "3.10" %}
-{% set version = "3.8.2" %}
+{% set version = "3.9.0" %}
 
 package:
   name: bokeh
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/bokeh/bokeh-{{ version }}.tar.gz
-  sha256: 8e7dcacc21d53905581b54328ad2705954f72f2997f99fc332c1de8da53aa3cc
+  sha256: 775219714a8496973ddbae16b1861606ba19fe670a421e4d43267b41148e07a3
   patches:
     - do_not_check_tags.patch
 
@@ -23,7 +23,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools-git-versioning
-    - setuptools >=64
+    - setuptools >=77
     - colorama
   run:
     - narwhals >=1.13
@@ -32,7 +32,6 @@ requirements:
     - contourpy >=1.2
     - numpy >=1.16
     - packaging >=16.8
-    - pandas >=1.2
     - pillow >=7.1.0
     - pyyaml >=3.10
     - tornado >=6.2
