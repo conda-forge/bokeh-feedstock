@@ -39,7 +39,7 @@ requirements:
   run_constrained:
     # First versions which support Bokeh 3.9.0
     # Does not need to be updated with new Bokeh releases
-    - panel >= 1.8.10
+    - panel >=1.8.10
 
 test:
   imports:
