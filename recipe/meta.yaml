@@ -36,6 +36,10 @@ requirements:
     - pyyaml >=3.10
     - tornado >=6.2
     - xyzservices >=2021.09.1
+  run_constrained:
+    # First versions which support Bokeh 3.9.0
+    # Does not need to be updated with new Bokeh releases
+    - panel >= 1.8.10
 
 test:
   imports:
